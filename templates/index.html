@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>FastMP3 - تحميل الصوت من اليوتيوب</title>
+  <style>
+    body {
+      background: linear-gradient(270deg, #667eea, #764ba2, #6a11cb, #2575fc);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      margin: 0;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px auto;
+      fill: #6c63ff;
+      animation: logoBounce 2s infinite;
+      cursor: default;
+    }
+
+    @keyframes logoBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: #6c63ff;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5751f7;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- أيقونة موسيقى SVG بسيطة -->
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
+      <path d="M50 8v36a8 8 0 1 1-4-6.928V18h-8v17.072a8 8 0 1 1-4-6.928V6h16z"/>
+    </svg>
+
+    <h1>FastMP3</h1>
+    <form action="/download" method="post">
+      <input type="text" name="url" placeholder="أدخل رابط فيديو يوتيوب" required />
+      <button type="submit">تحميل الصوت</button>
+    </form>
+    <footer>© 2025 FastMP3 - كل الحقوق محفوظة</footer>
+  </div>
+</body>
+</html>
